@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="asserts/CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="path/to/sweetalert/sweetalert2.min.css">
+    <script src="path/to/sweetalert/sweetalert2.min.js"></script>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>crud</h1>
+            <h3>Product management system</h3>
+        </div>
+        <div class="inputs">
+            <input type="text" class="title" placeholder="Title" id="title">
+            <div class="con_price">
+                <input type="number" onkeyup="getTotal()" class="price" placeholder="Price" id="price">
+                <input type="number" onkeyup="getTotal()" class="taxes" placeholder="Taxes" id="taxes">
+                <input type="number" onkeyup="getTotal()" class="ads" placeholder="Ads" id="ads">
+                <input type="number" onkeyup="getTotal()" class="discount" placeholder="Discount" id="discount">
+                <small id="total"></small>
+            </div>
+            <input type="text" class="count" placeholder="count" id="count">
+            <input type="text" class="category" placeholder="Category" id="category">
+            <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+            <input type="text" id="search" placeholder="Search" onkeyup="searchData(this.value)">
+            <div class="search">
+                <button id="searchByTitle" onclick="getSearchMood(this.id)">Search by title</button>
+                <button id="searchByCategory" onclick="getSearchMood(this.id)">Search by category</button>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="asserts/JS/main.js"></script>
+</body>
+
+</html>
